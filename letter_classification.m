@@ -1,0 +1,14 @@
+[num , txt , raw ] = xlsread('ocr1.xlsx');
+letter  = input('Enter U R Letter : ','s');
+x= upper (letter);
+fprintf ('U Entered : %c \t\n' ,x);
+fprintf ('char -> Character\n');
+fprintf ('h -> Horizontal lines\n');
+fprintf ('v -> Vertical  lines\n');
+fprintf ('r -> Right Oblique lines\n');
+fprintf ('l -> Left Oblique lines\n');
+fprintf ('c -> Curved Line\n');
+p = strcmpi(letter,raw(:));
+rowNum = find(p==1);
+display(raw(1,:));
+display(raw(rowNum,:));
